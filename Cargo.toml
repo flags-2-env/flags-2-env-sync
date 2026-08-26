@@ -1,0 +1,16 @@
+    [package]
+    name = "flags-2-env-sync"
+    version = "0.1.0"
+    edition = "2021"
+    license = "MIT"
+    description = "opto-sync wrapper for flags-2-env"
+    repository = "https://github.com/flags-2-env/flags-2-env-sync"
+
+    [dependencies]
+    serde = { version = "1", features = ["derive"] }
+    thiserror = "2"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+

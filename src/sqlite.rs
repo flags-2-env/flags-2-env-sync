@@ -4,4 +4,3 @@
 pub struct SqliteStore {
     pub path: String,
 }
-

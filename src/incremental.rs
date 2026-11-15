@@ -36,11 +36,7 @@ mod tests {
                 for mode in [SyncMode::Disabled, SyncMode::Enabled] {
                     let expected = match mode {
                         SyncMode::Disabled => EnvelopeDecision::Reject(SyncError::Disabled),
-                        SyncMode::Enabled => decide_envelope(
-                            mode,
-                            received + incoming,
-                            limit(8),
-                        ),
+                        SyncMode::Enabled => decide_envelope(mode, received + incoming, limit(8)),
                     };
                     assert_eq!(
                         decide_incremental(mode, received, incoming, limit(8)),
